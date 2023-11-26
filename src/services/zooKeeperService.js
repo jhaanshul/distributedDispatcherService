@@ -44,7 +44,7 @@ class ZookeeperService {
           // Parent node exists, proceed to create the child node
           this.#client.create(
             ZookeeperConfig.getPath(), // Provide a child path under the parent
-            Buffer.from(JSON.stringify(nodeData)),
+            // Buffer.from(JSON.stringify(nodeData)),
             zookeeper.CreateMode.EPHEMERAL,
             (createError, path) => {
               if (createError) {
